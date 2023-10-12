@@ -14,7 +14,6 @@ const Home = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const axiosPrivate = useAxiosPrivate();
   const { toast } = useToast();
@@ -23,7 +22,6 @@ const Home = () => {
   const { setAuth } = useAuth();
 
   const handleDeleteProduct = async (id: string) => {
-    setIsLoading(true);
     toast({
       variant: "loading",
       description: (
@@ -36,7 +34,6 @@ const Home = () => {
     try {
       await axiosPrivate.delete(`/products/${id}`);
       setProducts(products.filter((item) => item._id !== id));
-      setIsLoading(false);
       toast({
         description: (
           <div className="flex gap-1">
@@ -53,7 +50,6 @@ const Home = () => {
         }, 100);
       }
       const errorMsg = err.response?.data?.msg;
-      setIsLoading(false);
       toast({
         variant: "destructive",
         title: (

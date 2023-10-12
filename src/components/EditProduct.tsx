@@ -20,7 +20,6 @@ import {
   Check,
   ClipboardSignature,
   DollarSign,
-  HelpingHand,
   Loader2,
   PencilLine,
   Shapes,

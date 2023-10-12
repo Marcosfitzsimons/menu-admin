@@ -1,0 +1,27 @@
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "./ui/button";
+
+const SheetComponent = () => {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Button variant="secondary">Editar</Button>
+      </SheetTrigger>
+      <SheetContent side="left">
+        <SheetHeader>
+          <SheetTitle>Editar producto</SheetTitle>
+          <SheetDescription>Editá un producto existente</SheetDescription>
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
+  );
+};
+
+export default SheetComponent;

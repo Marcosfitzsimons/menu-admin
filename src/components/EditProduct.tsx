@@ -127,7 +127,7 @@ const EditProduct = ({ product, setProducts, products }: EditProductProps) => {
       description: (
         <div className="flex gap-1">
           <Loader2 className="h-5 w-5 animate-spin text-purple-900 shrink-0" />
-          Editando viaje...
+          Editando producto...
         </div>
       ),
     });
@@ -151,7 +151,7 @@ const EditProduct = ({ product, setProducts, products }: EditProductProps) => {
       toast({
         description: (
           <div className="flex gap-1">
-            {<Check className="h-5 w-5 text-green-600 shrink-0" />} Viaje ha
+            {<Check className="h-5 w-5 text-green-600 shrink-0" />} Producto ha
             sido editado con éxito
           </div>
         ),
@@ -167,10 +167,10 @@ const EditProduct = ({ product, setProducts, products }: EditProductProps) => {
       setIsSubmitted(false);
       toast({
         variant: "destructive",
-        title: "Error al editar viaje",
+        title: "Error al editar producto",
         description: errorMsg
           ? errorMsg
-          : "Ha ocurrido un error al editar viaje. Por favor, intentar más tarde",
+          : "Ha ocurrido un error al editar producto. Por favor, intentar más tarde",
       });
     }
   };

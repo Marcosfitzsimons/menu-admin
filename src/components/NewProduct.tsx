@@ -140,8 +140,8 @@ const NewProduct = ({ products, setProducts, setIsSheetOpen }: any) => {
       toast({
         description: (
           <div className="flex gap-1">
-            {<Check className="h-5 w-5 text-green-600 shrink-0" />} Publicación
-            ha sido creada con éxito
+            {<Check className="h-5 w-5 text-green-600 shrink-0" />} Producto ha
+            sido creado con éxito
           </div>
         ),
       });

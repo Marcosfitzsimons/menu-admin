@@ -1,15 +1,4 @@
-import {
-  AlignCenter,
-  BarChart3,
-  LayoutGrid,
-  LineChart,
-  LogOut,
-  Map,
-  Newspaper,
-  QrCode,
-  User,
-  Users,
-} from "lucide-react";
+import { AlignCenter, LayoutGrid, LogOut, QrCode } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "./ui/button";
 import {

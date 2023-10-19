@@ -135,7 +135,7 @@ export function DataTable<TData, TValue>({
   return (
     <div className="">
       <div className="w-full flex flex-col gap-4 py-4 lg:flex-row lg:justify-between ">
-        <div className="relative w-full max-w-xs flex items-center">
+        <div className="relative w-full max-w-sm flex items-center">
           <Search className="absolute right-3 w-4 h-4 text-accent" />
           <Input
             placeholder="Busca por nombre de producto..."
@@ -143,7 +143,7 @@ export function DataTable<TData, TValue>({
             onChange={(event) =>
               table.getColumn("title")?.setFilterValue(event.target.value)
             }
-            className="w-full max-w-xs"
+            className="w-full max-w-sm"
           />
         </div>
         <Sheet

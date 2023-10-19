@@ -330,6 +330,7 @@ const EditProduct = ({ product, setProducts, products }: EditProductProps) => {
               )}
             </div>
             <div className="grid w-full items-center gap-2">
+              <Label htmlFor="description">Descripción</Label>
               <div className="relative">
                 <PencilLine className="z-30 h-5 w-5 text-accent absolute left-[10px] top-2 shrink-0" />
                 <Textarea {...register("description")} className="pl-9" />

@@ -65,6 +65,20 @@ const Home = () => {
     }
   };
 
+  const sortProducts = (items: Product[]) => {
+    const sortedProducts = items.sort((a, b) => {
+      const categoryComparison = a.category.localeCompare(b.category);
+
+      if (categoryComparison !== 0) {
+        return categoryComparison;
+      }
+
+      return a.title.localeCompare(b.title);
+    });
+
+    return sortedProducts;
+  };
+
   const getProducts = async () => {
     setLoading(true);
     try {
@@ -116,7 +130,7 @@ const Home = () => {
         ) : (
           <DataTable
             loading={loading}
-            data={products}
+            data={sortProducts(products)}
             handleDeleteProduct={handleDeleteProduct}
             setProducts={setProducts}
             columns={productColumns}
